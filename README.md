@@ -9,4 +9,4 @@ Exchange 300 (ASX 300). In each dataset folder, there are two types of files for
 
 The file "./raw_data/stock_name.csv" contains the raw data for stock "stock_name" on the given period. The raw data includes five features: the opening price, high price, low price, closing price, and trading volume.
 The file "date.csv" gives the data collection period.
-The file "stock_symbols" is the stock list of the corresponding market index.
+The file "stock_symbols.csv" is the stock list of the corresponding market index.
