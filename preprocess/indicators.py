@@ -75,4 +75,4 @@ for file in files:
     pre_stock = pre_stock.dropna()
     pre_stock.to_csv(path+'features/'+file,index=False)
 
-print("用时：",time.time()-start_time)
+print("time cost：",time.time()-start_time)

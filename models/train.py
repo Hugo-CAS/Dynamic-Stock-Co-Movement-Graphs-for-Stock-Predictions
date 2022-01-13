@@ -26,7 +26,7 @@ from HADGNN import HAD_GNN
 
 parser = argparse.ArgumentParser('Co-movement Stock Graph for Stock tauedictions')
 parser.add_argument('--path', type=str, help='path of dataset', default='../datasets/s&p500/')
-parser.add_argument('--tou', type=int, help='tau-day prediction', default=9)
+parser.add_argument('--tau', type=int, help='tau-day prediction', default=9)
 parser.add_argument('--input_dim', type=int, help='input dimenssions of the model', default=12)
 parser.add_argument('--gpu', type=int, default=0, help='idx for the gpu to use')
 parser.add_argument('--seed', type=int, default=2020, help='random seed')
@@ -103,7 +103,7 @@ test_loader = DataLoader(test_graph_list, batch_size=args.bs)
 num_break = 0
 max_acc = 0
 max_mcf = 0
-early_stopping = 10
+early_stopping = 5
 
 train_loss = []
 time_recorder = []

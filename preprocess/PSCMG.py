@@ -20,7 +20,10 @@ if not os.path.exists(path+'graph_date/PsDt_15/Adjs'):
     
 if not os.path.exists(path+'graph_date/PsDt_15/features_10'):
     os.makedirs(path+'graph_date/PsDt_15/features_10')
-
+    
+if not os.path.exists(path+'graph_date/PsDt_15/labels'):
+    os.makedirs(path+'graph_date/PsDt_15/labels')
+    
 date = pd.read_csv(path+'date.csv')
 PsDt_15 = np.load(path+'graph/PsDt_15.npy')
 edges = []
@@ -115,7 +118,7 @@ for i in range(tou, PsDt_15.shape[0]-tou):
                                 #                                     'r_auxiliary']].values)
         
     date_feature_10 = np.array(date_feature_10)
-    np.save('./graph_date/PsDt_15/features_10/'+str(date_15.loc[i])+'_features_10.npy', date_feature_10)
+    np.save(path+'graph_date/PsDt_15/features_10/'+str(date_15.loc[i])+'_features_10.npy', date_feature_10)
     # if i >= 19:
     #     date_feature_20 = np.array(date_feature_20)
     #     np.save('./graph_date/PsDt_15/features_20/'+str(date_15.loc[i])+'_features_20.npy', date_feature_20)

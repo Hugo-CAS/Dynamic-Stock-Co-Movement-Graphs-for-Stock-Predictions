@@ -21,6 +21,9 @@ if not os.path.exists(path+'graph_date/MhDt_15/Adjs'):
 if not os.path.exists(path+'graph_date/MhDt_15/features_10'):
     os.makedirs(path+'graph_date/MhDt_15/features_10')
 
+if not os.path.exists(path+'graph_date/MhDt_15/labels'):
+    os.makedirs(path+'graph_date/MhDt_15/labels')
+
 date = pd.read_csv(path+'date.csv')
 MhDt_15 = np.load(path+'graph/MhDt_15.npy')
 edges = []

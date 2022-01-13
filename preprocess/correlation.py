@@ -41,16 +41,18 @@ for file in files:
     date_label_9[file.replace('.csv','')] = pre_stock['label_9']
 
 #Pearson CC
-Cor_14 = []
+print("calculating Pearson CC")
+PsDt_15 = []
 for i in range(15, len(date_close)):
-    Cor_14.append(date_close.loc[i-14:i].corr().values)
-Cor_14 = np.array(Cor_14)
-np.save(path+'graph/Cor_14.npy',Cor_14[18:])
-del Cor_14
+    PsDt_15.append(date_close.loc[i-15:i].corr().values)
+PsDt_15 = np.array(PsDt_15)
+np.save(path+'graph/PsDt_15.npy',PsDt_15[18:])
+del PsDt_15
     
 
 
 #Manhattan distance 
+print("calculating Manhattan distance")
 st = time.time()
 MhDt_15 = []
 for i in range(15, len(date_label_1)):
